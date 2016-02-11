@@ -1,0 +1,255 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+.gradient-input {
+  background: linear-gradient(to bottom, #f9f9f9 0%, #fefefe 100%);
+  box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.gradient-input:hover, .gradient-input:focus {
+  background: linear-gradient(to bottom, #fefefe 0%, #f9f9f9 100%);
+  box-shadow: inset 0 -2px 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.gradient-btn {
+  background: linear-gradient(to bottom, #3479eb 0%, #478cfe 50%, #5f9bff 100%);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.13);
+}
+
+.gradient-btn:hover, .gradient-btn:active {
+  background: linear-gradient(to bottom, #5f9bff 0%, #478cfe 50%, #3479eb 100%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #293041;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.accent {
+  font-weight: 600;
+}
+
+.page-wrapper {
+  background: #293e70 url("../img/bg.jpg") no-repeat scroll center center/cover;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.modal {
+  background: #fff;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotateX(-70deg);
+          transform: translate(-50%, -50%) rotateX(-70deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition: all 0.3s;
+  width: 600px;
+}
+
+.modal.show {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) rotateX(0deg);
+          transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.modal-header {
+  border-bottom: 1px solid #d9e7f7;
+  height: 120px;
+  line-height: 120px;
+  padding-left: 34px;
+}
+
+.modal-header a {
+  color: #293041;
+  display: inline-block;
+}
+
+.modal-header a > img {
+  margin-right: 15px;
+}
+
+.modal-header a > img,
+.modal-header a > span {
+  vertical-align: middle;
+}
+
+.modal-header span {
+  font: 600 42px/1 "Open Sans", sans-serif;
+}
+
+.modal-body {
+  padding: 35px 40px 40px 40px;
+}
+
+.modal-body-header {
+  font: 600 28px/1 "Open Sans", sans-serif;
+  margin: 0 0 28px 0;
+}
+
+.modal-body-text {
+  font: 400 27px/35px "Open Sans", sans-serif;
+  letter-spacing: -0.6px;
+}
+
+.form-email-verification {
+  color: #859bbb;
+  font-size: 24px;
+}
+
+.form-groups {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.control-label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.form-input-wrapper {
+  height: 60px;
+  position: relative;
+  width: 100%;
+}
+
+.form-control {
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  height: 100%;
+  left: 0;
+  padding-left: 20px;
+  padding-right: 75px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #a6bedc;
+}
+
+.form-control::-moz-placeholder {
+  color: #a6bedc;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #a6bedc;
+}
+
+.form-control:-moz-placeholder {
+  color: #a6bedc;
+}
+
+[class*="icon-"]:after {
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+}
+
+.icon-envelope:after {
+  background: url("../img/icon/icon-envelope.png") center center no-repeat;
+}
+
+.icon-lock:after {
+  background: url("../img/icon/icon-lock.png") center center no-repeat;
+}
+
+.form-submit {
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font: 400 28px/1 "Open Sans", sans-serif;
+  height: 80px;
+  text-shadow: 0 1px 1px #3479EB;
+  width: 100%;
+}
+
+.copyright {
+  bottom: 20px;
+  color: #fff;
+  left: 0;
+  padding: 0 20px;
+  position: absolute;
+  width: 100%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.right a {
+  color: #fff;
+}
+
+.right a:hover {
+  text-decoration: underline;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+@media (max-width: 1024px) {
+  .modal.show {
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transform: inherit;
+        -ms-transform: inherit;
+            transform: inherit;
+    width: 100%;
+  }
+  .form-submit {
+    white-space: normal;
+  }
+  .copyright {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-header span {
+    font-size: 26px;
+  }
+  .modal-body-header {
+    line-height: 1.3;
+  }
+}

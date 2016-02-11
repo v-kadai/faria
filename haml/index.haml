@@ -1,0 +1,77 @@
+!!! 5
+
+%html.no-js{:lang => "en"}
+
+  %head
+
+    -# ==========================================================================
+    -# Head
+    -# ==========================================================================
+
+    %meta{:charset => "utf-8"}
+
+    %title Faria
+
+    -# Mobile
+    -# ==========================================================================
+
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+
+    -# Favicon
+    -# ==========================================================================
+
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+
+    -# CSS
+    -# ==========================================================================
+
+    %link{:rel => "stylesheet", :href => "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"}
+    %link{:rel => "stylesheet", :href => "css/styles.css"}
+
+  %body
+
+    -# ==========================================================================
+    -# Content
+    -# ==========================================================================
+
+    .page-wrapper
+      .modal
+        .modal-header
+          %a{:href => "#"}
+            %img{:src => "img/logo.png", :alt => "ManageBac Logo", :title => "ManageBac Logo"}
+            %span
+              ManageBac
+        .modal-body
+          %h5.modal-body-header
+            Email Authentication
+          %p.modal-body-text
+            Please sign into
+            %span.accent ManageBac
+            using your old email address and existing password to authenticate your new email address.
+          %form.form-email-verification
+            .form-groups.clearfix
+              .form-group
+                %label.control-label{:for => "inputEmail"}
+                  Old Email Address
+                .form-input-wrapper.icon-envelope
+                  %input.form-control.gradient-input#inputEmail{:type => "email", :required => "true", :placeholder => "Email"}
+              .form-group
+                %label.control-label{:for => "inputPassword"}
+                  Existing Password
+                .form-input-wrapper.icon-lock
+                  %input.form-control.gradient-input#inputPassword{:type => "password", :required => "true", :placeholder => "Password"}
+            %input.form-submit.gradient-btn#inputPassword{:type => "submit", :value => "Authenticate Account"}
+
+      .copyright
+        .left
+          &copy; Faria Systems. All right reserved.
+        .right
+          %a{:href => "#"}
+            Terms, Policies & Agreements.
+
+    -# JS
+    -# ==========================================================================
+
+    -# Custom JS
+
+    %script{:src => "js/main.js"}

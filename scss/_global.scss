@@ -1,0 +1,23 @@
+html
+{
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after
+{
+	box-sizing: inherit;
+}
+body
+{
+	color      : $color-font;
+	font-family: $font-default;
+}
+a
+{
+	text-decoration: none;
+}
+.accent
+{
+	font-weight: 600; //Semibold
+}

@@ -54,13 +54,13 @@
                 %label.control-label{:for => "inputEmail"}
                   Old Email Address
                 .form-input-wrapper.icon-envelope
-                  %input.form-control.gradient-input#inputEmail{:type => "email", :required => "true", :placeholder => "Email"}
+                  %input.form-control.gradient-input#inputEmail{:type => "email", :required => true, :placeholder => "Email"}
               .form-group
                 %label.control-label{:for => "inputPassword"}
                   Existing Password
                 .form-input-wrapper.icon-lock
-                  %input.form-control.gradient-input#inputPassword{:type => "password", :required => "true", :placeholder => "Password"}
-            %input.form-submit.gradient-btn#inputPassword{:type => "submit", :value => "Authenticate Account"}
+                  %input.form-control.gradient-input#inputPassword{:type => "password", :required => true, :placeholder => "Password"}
+            %input.form-submit.gradient-btn{:type => "submit", :value => "Authenticate Account"}
 
       .copyright
         .left
